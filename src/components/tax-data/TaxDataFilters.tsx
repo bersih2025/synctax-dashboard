@@ -6,22 +6,25 @@ import { Label } from "@/components/ui/label";
 const TaxDataFilters = () => {
   return (
     <div className="space-y-4 mb-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="space-y-2">
           <Label>Rentang Tanggal</Label>
-          <Input type="date" />
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Input type="date" placeholder="Dari tanggal" className="w-full" />
+            <Input type="date" placeholder="Sampai tanggal" className="w-full" />
+          </div>
         </div>
         <div className="space-y-2">
           <Label>Nama Pemilik</Label>
-          <Input type="text" placeholder="Cari nama pemilik..." />
+          <Input type="text" placeholder="Cari nama pemilik..." className="w-full" />
         </div>
         <div className="space-y-2">
           <Label>Nama Outlet</Label>
-          <Input type="text" placeholder="Cari nama outlet..." />
+          <Input type="text" placeholder="Cari nama outlet..." className="w-full" />
         </div>
         <div className="space-y-2">
           <Label>NPWP</Label>
-          <Input type="text" placeholder="Cari NPWP..." />
+          <Input type="text" placeholder="Cari NPWP..." className="w-full" />
         </div>
       </div>
     </div>

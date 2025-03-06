@@ -39,7 +39,7 @@ const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <SidebarComponent>
+    <SidebarComponent className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <SidebarContent>
         <div className="p-4">
           <h1 className="text-xl font-bold">Synchro Tax Insight</h1>
@@ -54,7 +54,7 @@ const Sidebar = () => {
                     asChild
                     className={location.pathname === item.path ? "bg-primary/10" : ""}
                   >
-                    <Link to={item.path} className="flex items-center gap-3">
+                    <Link to={item.path} className="flex items-center gap-3 w-full">
                       <item.icon className="h-5 w-5" />
                       <span>{item.title}</span>
                     </Link>
